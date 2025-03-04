@@ -1,0 +1,28 @@
+
+.footerInvisible{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.8s ease;
+  
+  }
+  
+  .footerVisible{
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    color: #000000;
+    text-align: center;
+    z-index: 100;
+    width: 100%;
+    gap: 1%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    list-style-type: none;
+  }
+  
+  .footerVisible img{
+    height: 50%;
+  }
+  
