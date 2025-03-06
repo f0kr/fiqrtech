@@ -6,10 +6,10 @@ export default function Footer() {
     const {isLoading} = useContext(LoadingContext)
     return (
         <ul className={isLoading? styles.footerInvisible: styles.footerVisible}>
-        <li><img src="public/icons8-facebook.svg" alt="facebook"/></li>
-        <li><img src="public/icons8-instagram.svg" alt="instagram"/></li>
-        <li><img src="public/icons8-whatsapp.svg" alt="whatsapp"/></li>
-        <li><img src="public/icons8-telegram.svg" alt="telegram"/></li>
+        <li><a href="https://www.facebook.com/people/fiqrtech/61571065922543/" target='_blank' rel='noopener noreferrer'><img src="/icons8-facebook.svg" alt="facebook"/></a></li>
+        <li><a href="https://www.instagram.com/fiqrtech" target='_blank' rel='noopener noreferrer'><img src="/icons8-instagram.svg" alt="instagram"/></a></li>
+        <li><a href="https://wa.me/9647880311000" target='_blank' rel='noopener noreferrer'><img src="/icons8-whatsapp.svg" alt="whatsapp"/></a></li>
+        <li><a href="https://t.me/fiqrtech" target='_blank' rel='noopener noreferrer'><img src="/icons8-telegram.svg" alt="telegram"/></a></li>
       </ul>
     )
 }

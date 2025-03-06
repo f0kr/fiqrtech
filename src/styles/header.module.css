@@ -1,17 +1,16 @@
 .headerInvisible {
     position: absolute;
     top: -10px;
-    opacity: 0;
     pointer-events: none;
-    transition: opacity 0.8s ease;
+    transition: all 0.8s ease;
   }
   
   
   .headerVisible{
     opacity: 1;
     pointer-events: auto;
-    transition: opacity 0.8s ease;
-    background-color: #333;
+    transition: all 0.8s ease;
+    background-color: transparent;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -25,19 +24,46 @@
   .headerVisible ul{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-inline: 5%;
     list-style-type: none;
   }
   
   .headerVisible li a{
     color: #fff;
-    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
     padding: 10px;
+    text-shadow: 3px 2px 5px black;
+    text-decoration: none;
+  }
+
+  .ourWork{
+    position: relative;
+    cursor: pointer;
+  }
+
+  .arrow {
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 2px;
+    height: 8px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #fffbfb;
+    transform: rotate(-90deg);
+
+  }
+
+  .logo{
+    padding-bottom: 8px;
+    border-bottom: 2px solid white;
   }
   
   .logo img{
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
     z-index: 10000;
   }

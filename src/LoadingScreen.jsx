@@ -7,8 +7,8 @@ import useCubeRotation from "./utility/useCubeRotation";
 export default function Dice() {
   const diceRef = useRef();
   const {setIsLoading} = useContext(LoadingContext)
-  const {setAnimationLoad} = useContext(AnimationLoadContext)
-  const {handlePointDown} = useCubeRotation(diceRef)
+  const {setAnimationLoad, animationLoad} = useContext(AnimationLoadContext)
+  const {handlePointerDown} = useCubeRotation(diceRef)
   
   /* const rotationSpeed = useRef(0.2); // Start slow */
 
@@ -23,37 +23,80 @@ export default function Dice() {
   
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.fromTo(
-      diceRef.current.position,
-      { x: 1, y: -5, z: -5 },
-      {
-        x: 0,
-        y: 0,
-        z: 0,
-        duration: 2,
-        ease: "power3.out",
-      },
-      0
-    ).to(
-      diceRef.current.scale, {
-        x: 7,
-        y: 7,
-        z: 7,
-        duration: 2,
-      },
-      0
-    )
     
-    tl.fromTo(
-      diceRef.current.rotation,
-      { x: 1, y: -5},
-      {
-        x: Math.PI * 6 ,
+    if(animationLoad){
+      tl.fromTo(
+        diceRef.current.position,
+        { x: 1, y: -5, z: -5 },
+        {
+          x: 0,
+          y: 0,
+          z: 0,
+          duration: 2,
+          ease: "power3.out",
+        },
+        0
+      ).to(
+        diceRef.current.scale, {
+          x: 7,
+          y: 7,
+          z: 7,
+          duration: 2,
+        },
+        0
+      )
+      
+      tl.fromTo(
+        diceRef.current.rotation,
+        { x: 1, y: -5},
+        {
+          x: -(Math.PI * 6)  ,
+          y: Math.PI * 6 ,
+          duration: 6,
+          ease: "power3.out",
+        }, 0
+      )
+      
+      tl.fromTo(
+        diceRef.current.rotation,
+        {x: -(Math.PI * 6)  ,
         y: Math.PI * 6 ,
-        duration: 6,
-        ease: "power3.out",
-      }, 0
-    )
+        z: 0,     
+      },
+        {
+          x: -((Math.PI * 6) + 1.3)  ,
+          y: Math.PI * 6 ,
+          z: + 1.29,
+          duration: 1,
+          ease: "power3.out",
+        }
+      )
+
+    }else{
+      tl.to(diceRef.current.position,{
+       x: 0,
+       y: 0,
+       z: 0,
+       duration: 0
+      })
+      tl.to(diceRef.current.scale,{
+        x:7,
+        y:7,
+        z:7,
+        duration:0
+      })
+      tl.fromTo(
+        diceRef.current.rotation,
+        { x: 1, y: -5},
+        {
+          x: -((Math.PI * 6) + 1.3)  ,
+          y: Math.PI * 6 ,
+          z: + 1.29,
+          duration: 0,
+          ease: "power3.out",
+        }
+      )
+    }
 
     
     tl.to(diceRef.current.position, {
@@ -72,14 +115,20 @@ export default function Dice() {
       tl.kill();
     };
 
-  },[setIsLoading, setAnimationLoad]);
+  },[animationLoad]);
 
-
+  /* const materials = [
+    <meshStandardMaterial attach="material-0" color="orange" />,  // Right (+X)
+    <meshStandardMaterial attach="material-1" color="red" />,   // Left (-X)
+    <meshStandardMaterial attach="material-2" color="green" />, // Top (+Y)
+    <meshStandardMaterial attach="material-3" color="yellow" />, // Bottom (-Y)
+    <meshStandardMaterial attach="material-4" color="blue" />, // Front (+Z) ✅ This is the face we changed!
+    <meshStandardMaterial attach="material-5" color="purple" />  // Back (-Z)
+  ]; */
   return (
-    
-    <mesh onPointerDown={handlePointDown} ref={diceRef} rotateY={true}>
+    <mesh onPointerDown={handlePointerDown} ref={diceRef} castShadow>
       <boxGeometry args={[0.3, 0.3, 0.3]} />
       <meshStandardMaterial side={2}  color="white"/>
     </mesh>
-  );
+  )
 }

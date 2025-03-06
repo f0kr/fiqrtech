@@ -9,20 +9,22 @@
   
   .footerVisible{
     display: flex;
+    flex-direction: column;
     opacity: 1;
     justify-content: center;
     color: #000000;
     text-align: center;
     z-index: 100;
-    width: 100%;
     gap: 1%;
+    padding: 20px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 30vh;
+    left: 0;
     list-style-type: none;
   }
   
   .footerVisible img{
     height: 50%;
+    cursor: pointer;
   }
   
