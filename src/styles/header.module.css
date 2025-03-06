@@ -3,6 +3,7 @@
     top: -10px;
     pointer-events: none;
     transition: all 0.8s ease;
+    opacity: 0;
   }
   
   
