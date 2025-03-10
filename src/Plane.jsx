@@ -2,12 +2,12 @@ import { useEffect, useRef, useContext } from "react";
 import gsap from "gsap";
 import { LoadingContext } from "./contexts/LoadingContext";
 import { AnimationLoadContext } from "./contexts/AnimationLoad";
-
+import * as THREE from "three"
 export default function Plane() {
   const planeRef = useRef();
   const { isLoading } = useContext(LoadingContext);
   const {animationLoad} = useContext(AnimationLoadContext)
-
+        
   useEffect(() => {
     if (planeRef.current) {
       planeRef.current.position.set(0, -5, 0);
@@ -25,7 +25,10 @@ export default function Plane() {
   return (
     <mesh ref={planeRef} receiveShadow rotation={[-Math.PI / 2, 0, 0]} >
       <circleGeometry args={[3, 32, 0, Math.PI]} />  
-      <meshStandardMaterial color="white" />
+      <meshPhysicalMaterial color="#555"/>
     </mesh>
   );
 }
+
+
+

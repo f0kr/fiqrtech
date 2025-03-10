@@ -1,0 +1,18 @@
+import styles from '../styles/discreption.module.css'
+    
+export default function Discreption() {
+    return (
+        <div className={styles.container}>
+            <div className={styles.disc1.h}> <b>Disc1</b>  soluta dolor cumque. Tenetur eligendi animi totam ab et nam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque fugit pariatur hic laudantium, dolor corrupti quaerat maxime ratione, amet laboriosam molestiae? Ratione deleniti veniam quasi. Ea, quibusdam? Sapiente, in dignissimos. Lorem ipsum dolor sit amet conelle tempore</div>
+            <div className={styles.disc2}> <b>Disc2</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nis Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nesciunt aut commodi doloribus unde ratione cumque sunt odio facere rem recusandae, odit ab soluta amet, fuga libero in quasi qui?Placeat dolor aliquam eos ipsa incidunt.</div>
+            <div className={styles.disc3}> <b>Disc3</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nis Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nesciunt aut commodi doloribus unde ratione cumque sunt odio facere rem recusandae, odit ab soluta amet, fuga libero in quasi qui?Placeat dolor aliquam eos ipsa incidunt.</div>
+            <div className={styles.disc4}> <b>Disc4</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nis Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nesciunt aut commodi doloribus unde ratione cumque sunt odio facere rem recusandae, odit ab soluta amet, fuga libero in quasi qui?Placeat dolor aliquam eos ipsa incidunt.</div>
+        </div>
+    );
+}
+
+{/* 
+            <div className={styles.line_1_container}>
+              <div className={styles.line_1}><div className={styles.line_2}></div></div>
+            </div>
+             */}

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useContext } from "react";
+import { RoundedBox } from "@react-three/drei";
 import gsap from "gsap";
 import { LoadingContext } from "./contexts/LoadingContext";
 import { AnimationLoadContext } from "./contexts/AnimationLoad";
@@ -126,9 +127,15 @@ export default function Dice() {
     <meshStandardMaterial attach="material-5" color="purple" />  // Back (-Z)
   ]; */
   return (
-    <mesh onPointerDown={handlePointerDown} ref={diceRef} castShadow>
-      <boxGeometry args={[0.3, 0.3, 0.3]} />
-      <meshStandardMaterial side={2}  color="white"/>
-    </mesh>
+      <RoundedBox 
+      onPointerDown={handlePointerDown} ref={diceRef}
+      args={[0.3, 0.3, 0.3]}  // Width, Height, Depth
+      radius={0.008}  // Corner radius
+      smoothness={3} // Higher = smoother edges
+      castShadow
+    >
+      <meshStandardMaterial side={2} color="#333" />
+    </RoundedBox>
   )
+  
 }
