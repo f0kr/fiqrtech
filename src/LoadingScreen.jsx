@@ -10,7 +10,7 @@ export default function Dice() {
   const {setIsLoading} = useContext(LoadingContext)
   const {setAnimationLoad, animationLoad} = useContext(AnimationLoadContext)
   const {handlePointerDown} = useCubeRotation(diceRef)
-  
+
   /* const rotationSpeed = useRef(0.2); // Start slow */
 
   // texture control
@@ -127,14 +127,14 @@ export default function Dice() {
     <meshStandardMaterial attach="material-5" color="purple" />  // Back (-Z)
   ]; */
   return (
-      <RoundedBox 
+      <RoundedBox
       onPointerDown={handlePointerDown} ref={diceRef}
       args={[0.3, 0.3, 0.3]}  // Width, Height, Depth
       radius={0.008}  // Corner radius
       smoothness={3} // Higher = smoother edges
       castShadow
     >
-      <meshStandardMaterial side={2} color="#333" />
+      <meshStandardMaterial side={2} color="#ee771a" />
     </RoundedBox>
   )
   

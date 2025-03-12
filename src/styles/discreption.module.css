@@ -1,16 +1,30 @@
-.disc1{
+.disc{
     position: absolute;
     top: 25%;
     left: 63%;
     width: 30%;
     text-align: center;
     color: white;
-    backdrop-filter: blur(7px) ;
+    backdrop-filter: blur(2px);
     border-radius: 10px; /* Rounded corners */
-    transform: rotateZ('10deg');
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
     padding: 20px;
     border: 0.5px solid rgba(255, 255, 255, 0.3); /* Subtle white border */
+    transition: transform 400ms linear;
+
+}
+
+.none{
+    display: none;
+}
+
+.transition{
+    transform: scale(0.5) translate3d(500px,0px,0px);
+}
+
+.disc:hover{
+    filter: drop-shadow(0 0 1em #c05d1b);
+    transition: 0.3s linear;
 }
 
 

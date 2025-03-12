@@ -18,7 +18,9 @@ export default function LoadingCanvas(){
       camera.position.z = 5
       camera.lookAt(0, 0, 0);
       scene.background = new THREE.Color('#222222')
-      scene.fog = new THREE.Fog(0xFFFFFF, 0.1, 130)
+      /* scene.fog = new THREE.Fog(0xFFFFFF, 0.1, 80) */
+      scene.fog = new THREE.FogExp2(0xffffff, 0.03)
+
     },[camera, scene])
     return null
   }
@@ -36,7 +38,9 @@ export default function LoadingCanvas(){
         <CameraSceneControl />
         <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />
         <ambientLight intensity={0.1} />
-        <directionalLight position={[1, 10, 50]} intensity={1.7} distance={50}
+        <directionalLight position={[1, 10, 10]} intensity={1.7} distance={50}
+        />
+        <directionalLight position={[1, -10, 10]} intensity={0.8} distance={50}
         />
         <directionalLight position={[0, 30, 25]} intensity={0.1}
         castShadow

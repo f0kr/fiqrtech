@@ -7,12 +7,13 @@ export default function Plane() {
   const planeRef = useRef();
   const { isLoading } = useContext(LoadingContext);
   const {animationLoad} = useContext(AnimationLoadContext)
-        
+
   useEffect(() => {
     if (planeRef.current) {
       planeRef.current.position.set(0, -5, 0);
       planeRef.current.scale.set(0, 0, 0);
     }
+
     const tl = gsap.timeline();
     if (!isLoading && animationLoad) {
       
@@ -25,10 +26,7 @@ export default function Plane() {
   return (
     <mesh ref={planeRef} receiveShadow rotation={[-Math.PI / 2, 0, 0]} >
       <circleGeometry args={[3, 32, 0, Math.PI]} />  
-      <meshPhysicalMaterial color="#555"/>
+      <meshStandardMaterial side={2} color="#417290" roughness={5}/>
     </mesh>
   );
 }
-
-
-

@@ -25,6 +25,15 @@
   
   .footerVisible img{
     height: 50%;
-    cursor: pointer;
+    cursor: url("/pointer.cur"), auto;
+    transition: 0.3s ease-in-out;
+  }
+
+  .footerVisible li a{
+    cursor: url("/pointer.cur"), auto;
+  }
+
+  .footerVisible img:hover{
+    filter: drop-shadow(0 0 1em #c05d1b);
   }
   

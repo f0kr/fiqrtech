@@ -20,7 +20,6 @@
     position: absolute;
     top: 0;
     right: 0;
-        backdrop-filter: blur(20px) ;
     border-radius: 10px; /* Rounded corners */
   }
   
@@ -37,13 +36,19 @@
     font-weight: 700;
     font-size: 1.5rem;
     padding: 10px;
-    text-shadow: 3px 2px 5px black;
     text-decoration: none;
+    cursor: url("/pointer.cur"), auto;
   }
 
   .ourWork{
     position: relative;
-    cursor: pointer;
+    cursor: url("/pointer.cur"), auto;
+    transition: 0.3s ease-in-out;
+  }
+
+  .ourWork:hover{
+    transform: translateY(-1px);
+    filter: drop-shadow(0 0 1em #c05d1b);
   }
 
   .arrow {
@@ -56,17 +61,26 @@
     border-right: 15px solid transparent;
     border-top: 25px solid #fffbfb;
     transform: rotate(-90deg);
+    cursor: url("/pointer.cur"), auto;
 
   }
 
   .logo{
     padding-bottom: 8px;
     border-bottom: 2px solid white;
+    transition: 0.3s ease-in-out;
   }
+
+  .logo:hover{
+    transform: translateY(-1px);
+    filter: drop-shadow(0 0 1em #c05d1b);
+  }
+
+
   
   .logo img{
     height: 40px;
     width: 40px;
-    cursor: pointer;
+    cursor: url("/pointer.cur"), auto;
     z-index: 10000;
   }
