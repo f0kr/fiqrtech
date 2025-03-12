@@ -1,4 +1,5 @@
 import { LoadingContext } from './contexts/LoadingContext'
+import Hum from './sub/Hum'
 import { Link } from 'react-router-dom'
 import styles from './styles/header.module.css'
 import { useContext } from 'react'
@@ -9,11 +10,7 @@ export default function Header() {
       <nav>
         <ul>
           <li className={styles.logo}><Link to="/"><img src="/logoWhite.png" alt="logo" /></Link></li>
-          <div className={styles.hum_container}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+          <Hum/>
           <li className={styles.ourWork}><Link to="/ourwork">Our Work</Link>
           <div className={styles.arrow}></div>
           </li>

@@ -22,6 +22,8 @@
     width: fit-content;
     text-align: center;
     font-size: 2rem;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 20px;
     transition: transform 400ms linear;
     color: #ccc;      
@@ -137,7 +139,7 @@
     .disc{
         position: absolute;
         top: 15%;
-        right: 10%;
+        left: 20%;
         width: 60%;
         height: fit-content;
         text-align: center;
@@ -153,6 +155,11 @@
 
     .department{
         display: none;
+        position: absolute;
+        bottom: 20%;
+        left: 18%;
+        border-bottom: 1px solid white;
+        border-radius: 10px;
     }
 
     .drag_indicator{
