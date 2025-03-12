@@ -84,3 +84,38 @@
     cursor: url("/pointer.cur"), auto;
     z-index: 10000;
   }
+
+  .hum_container{
+    display: none;
+  }
+
+  @media screen and (max-width: 320px) {
+    
+    .headerVisible ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+    }
+
+    .hum_container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hum_container div{
+      width: 40px;
+      height: 5px;
+      background-color: black;
+      border-radius: 5px;
+      background-color: white;
+    }
+
+    .ourWork{
+      display: none;
+    }
+  }

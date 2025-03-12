@@ -2,29 +2,28 @@ import { useContext, useEffect, useState } from "react"
 import gsap from "gsap"
 import { LoadingContext } from "../contexts/LoadingContext"
 import { FaceNumberContext } from "../contexts/FaceNumberContext"
+import { DragContext } from "../contexts/DragContext"
 
 export default function useCubeRotation(diceRef) {
   const { isLoading } = useContext(LoadingContext)
   const [allowRotate, setAllowRotate] = useState(true)
   const [startX, setStartX] = useState(null)
   const { faceNumber, setFaceNumber } = useContext(FaceNumberContext)
-
-  useEffect(()=> {
-    console.log(faceNumber)
-  },[faceNumber])
+  const {setDraged} = useContext(DragContext)
 
   useEffect(() => {
 
   
     function handleStart() {
       setAllowRotate(false)
+      setDraged(true)
     }
   
     function handleComplete() {
       setAllowRotate(true)  
     }
 
-    const handleMouseUp = (e) => {
+    const handlePointerUp = (e) => {
       if (!isLoading && allowRotate && startX !== null) {
         const endX = e.clientX;
         const direction = endX < startX ? -1 : 1
@@ -53,8 +52,8 @@ export default function useCubeRotation(diceRef) {
       }
     }
 
-    window.addEventListener("mouseup", handleMouseUp);
-    return () => window.removeEventListener("mouseup", handleMouseUp);
+    window.addEventListener("pointerup", handlePointerUp);
+    return () => window.removeEventListener("pointerup", handlePointerUp);
     
   }, [isLoading, allowRotate, startX, diceRef, faceNumber]);
 

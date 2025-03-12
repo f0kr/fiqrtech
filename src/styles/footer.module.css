@@ -36,4 +36,10 @@
   .footerVisible img:hover{
     filter: drop-shadow(0 0 1em #c05d1b);
   }
+
+  @media screen and (max-width: 320px) {
+    .footerVisible{
+      display: none;
+    }
+  }
   

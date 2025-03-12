@@ -6,4 +6,19 @@ body{
   overflow: hidden;
   position: relative;
   cursor: url("/cursor.cur"), auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+#custom-cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;  
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease-out;
+  z-index: 9999;     
 }

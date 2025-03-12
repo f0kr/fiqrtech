@@ -9,6 +9,11 @@ export default function Header() {
       <nav>
         <ul>
           <li className={styles.logo}><Link to="/"><img src="/logoWhite.png" alt="logo" /></Link></li>
+          <div className={styles.hum_container}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <li className={styles.ourWork}><Link to="/ourwork">Our Work</Link>
           <div className={styles.arrow}></div>
           </li>
