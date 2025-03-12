@@ -37,7 +37,7 @@
     filter: drop-shadow(0 0 1em #c05d1b);
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 500px) {
     .footerVisible{
       display: none;
     }
