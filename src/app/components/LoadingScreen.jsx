@@ -111,6 +111,14 @@ export default function Dice() {
       onStart:()=> setIsLoading(false)
     })
 
+/*     tl.to(diceRef.current.rotation, {
+      z: "-=0.4",
+      duration: 0.,
+      yoyo: true,
+      repeat: -1,
+      ease: "linear",
+    }) */
+
     
 
     return () => {
