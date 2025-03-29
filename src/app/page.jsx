@@ -2,7 +2,7 @@
 "use client";
 import dynamic from 'next/dynamic';
 
-const LoadingCanvas = dynamic(() => import('../components/LoadingCanvas'), {
+const LoadingCanvas = dynamic(() => import('./components/LoadingCanvas'), {
   ssr: false,
   loading: () => <div>Loading...</div>
 });

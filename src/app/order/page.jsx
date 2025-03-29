@@ -1,10 +1,11 @@
 "use client";
 
-import styles from '../../../../styles/order.module.css';
+import styles from '../../../styles/order.module.css';
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { useRouter } from 'next/navigation';
-import { Link } from '../../../i18n/navigation';
+/* import { Link } from '../../../i18n/navigation'; */
+import Link from 'next/link';
 import toast from 'react-hot-toast';
 
 export default function Order() {

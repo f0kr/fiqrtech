@@ -1,7 +1,8 @@
 "use client"
 
 import styles from '../../../../styles/orderbtn.module.css'
-import { Link } from '../../../i18n/navigation';
+/* import { Link } from '../../../i18n/navigation'; */
+import Link from 'next/link';
 import { useContext } from 'react';
 import { LoadingContext } from '../../utils/contexts/LoadingContext';
 export default function Orderbtn() {
