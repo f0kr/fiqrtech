@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-import createNextIntPlugin from 'next-intl/plugin'
+import createNextIntlPlugin from 'next-intl/plugin'
 
 
 const nextConfig = {
@@ -8,6 +8,6 @@ const nextConfig = {
     },
   };
 
-const withIntlIntl = createNextIntPlugin()
+const withIntlIntl = createNextIntlPlugin()
 
 export default withIntlIntl(nextConfig) ;
