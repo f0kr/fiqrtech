@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import createNextIntlPlugin from 'next-intl/plugin'
 
-export default nextConfig;
+
+const nextConfig = {
+    images: {
+      domains: ['images.unsplash.com'], // Replace with your allowed image domain(s)
+    },
+  };
+
+const withIntlIntl = createNextIntlPlugin()
+
+export default withIntlIntl(nextConfig) ;

@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "../../../../styles/hum.module.css";
-/* import { Link } from '../../../i18n/navigation'; */
-import Link from "next/link";
+import { Link } from '../../../i18n/navigation';
 export default function Hum() {
   const [toggled, setToggled] = useState(false);
 
@@ -54,7 +53,7 @@ export default function Hum() {
         </div>
         
         {/* Menu Links */}
-        <Link href="#" className={styles.menuItem}>Our Work</Link>
+        <Link href="/ourwork" className={styles.menuItem}>Our Work</Link>
         <Link href="/order" className={styles.menuItem}>Order</Link>
         <Link href="/about" className={styles.menuItem}>About Us</Link>
       </div>
