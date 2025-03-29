@@ -2,7 +2,7 @@
 
 import styles from '../../../../styles/order.module.css';
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from 'emailjs-com';
 import { useRouter } from 'next/navigation';
 import { Link } from '../../../i18n/navigation';
 import toast from 'react-hot-toast';
