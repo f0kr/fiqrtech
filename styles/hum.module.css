@@ -1,0 +1,101 @@
+.container{
+    display: none;
+  }
+
+  .none{
+    display: none;
+  }
+
+  .slide_window{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s linear;
+  }
+
+  .wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow {
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		background: transparent;
+		transition: 0.2s ease-in-out;
+  }
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    background: hsl(30, 100%, 80%);
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .line:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  /* Menu item links */
+.menuItem {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.menuItem:hover {
+  color: hsl(30, 100%, 80%); /* Change color on hover */
+  cursor: pointer;
+}
+
+/* Optional: Add spacing between the links if needed */
+.slide_window a:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+
+  @media screen and (max-width: 500px) {
+    .hum_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+      }
+  
+      .hum_container div{
+        width: 40px;
+        height: 5px;
+        background-color: black;
+        border-radius: 5px;
+        background-color: white;
+      }
+
+      .container{
+        display: flex;
+      }
+  
+  }

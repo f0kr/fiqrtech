@@ -1,0 +1,6 @@
+
+User-agent: *
+Allow: /
+Sitemap: https://fiqrtech.com/sitemap.xml
+
+Disallow: /_next/static/chunks/webworker-*
