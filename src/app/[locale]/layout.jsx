@@ -12,16 +12,20 @@ export const metadata =  {
     default: 'FiqrTech - Your Trusted Tech Partner',
     template: '%s | FiqrTech'
   },
-  description: 'FiqrTech provides innovative technology solutions for businesses of all sizes.',
+  description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
   keywords: ['technology', 'software', 'development', 'solutions'],
-  metadataBase: new URL('https://fiqrtech.com'),
+  metadataBase: new URL('https://www.fiqrtech.com'),
   alternates: {
     canonical: '/',
   },
+  languages: {
+    'en': '/en',
+    'ar': '/ar',
+  },
   openGraph: {
     title: 'FiqrTech - Your Trusted Tech Partner',
-    description: 'FiqrTech provides innovative technology solutions for businesses of all sizes.',
-    url: 'https://fiqrtech.com',
+    description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
+    url: 'https://www.fiqrtech.com',
     siteName: 'FiqrTech',
     images: [
       {
