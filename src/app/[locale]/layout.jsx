@@ -6,46 +6,47 @@ import Footer from '../components/Footer';
 import Providers from './providers'
 import '../../../styles/globals.css';
 
-
-
-
-export const metadata =  {
-  title: {
-    default: 'FiqrTech - Your Trusted Tech Partner',
-    template: '%s | FiqrTech'
-  },
-  description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
-  keywords: ['technology', 'software', 'development', 'solutions'],
-  metadataBase: new URL('https://www.fiqrtech.com'),
-  alternates: {
-    canonical: '/',
-  },
-  languages: {
-    'en': '/en',
-    'ar': '/ar',
-  },
-  openGraph: {
-    title: 'FiqrTech - Your Trusted Tech Partner',
+export function generateMetadata(){
+  return{
+    title: {
+      default: 'FiqrTech - Your Trusted Tech Partner',
+      template: '%s | FiqrTech'
+    },
     description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
-    url: 'https://www.fiqrtech.com',
-    siteName: 'FiqrTech',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    keywords: ['technology', 'software', 'development', 'solutions'],
+    metadataBase: new URL('https://www.fiqrtech.com'),
+    alternates: {
+      canonical: '/',
+    },
+    languages: {
+      'en': '/en',
+      'ar': '/ar',
+    },
+    openGraph: {
+      title: 'FiqrTech - Your Trusted Tech Partner',
+      description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
+      url: 'https://www.fiqrtech.com',
+      siteName: 'FiqrTech',
+      type: 'website',
+    },
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  other: {
-    'fb:app_id' : '1168044524914647'
-  },
+    other: {
+      'fb:app_id' : '1168044524914647'
+    },
+  }
 }
+
+
 
 
 export default async function RootLayout({children, params}) {
