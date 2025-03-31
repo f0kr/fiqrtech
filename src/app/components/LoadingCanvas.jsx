@@ -33,7 +33,7 @@ export default function LoadingCanvas(){
 
         
 
-        <Canvas gl={{antialias: true}} dpr={window.devicePixelRatio}
+        <Canvas gl={{antialias: true}} /* dpr={window.devicePixelRatio} */
         shadows
         >
           <Preload all />

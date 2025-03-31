@@ -7,6 +7,10 @@ import { useRouter } from 'next/navigation';
 import { Link } from '../../../i18n/navigation';
 import toast from 'react-hot-toast';
 
+/* export const metadata = {
+  title: "Order",
+  description: "Fill out this form to submit your order",
+} */
 export default function Order() {
   const router = useRouter(); // Replaced useNavigate with Next.js useRouter
   const [formData, setFormData] = useState({

@@ -4,7 +4,17 @@ import createNextIntlPlugin from 'next-intl/plugin'
 
 const nextConfig = {
     images: {
-      domains: ['images.unsplash.com'], // Replace with your allowed image domain(s)
+      domains: ['images.unsplash.com'], 
+    },
+    async redirects() {
+      return [
+        {
+          source: '/:path*',
+          has: [{ type: 'host', value: 'fiqrtech.com' }], 
+          destination: 'https://fiqrtech.com/:path*',
+          permanent: true, // 301 redirect
+        },
+      ];
     },
   };
 

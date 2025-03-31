@@ -10,6 +10,16 @@ import "../../../../styles/ourwork.css";
 import { categories, projects } from "../../../../projectData";
 
 // LazyImage component for lazy loading
+
+/* export const metadata = {
+  title: {
+    default: 'Our Work',
+    template: '%s | Our Work'
+  },
+  description: 'FiqrTech is a cutting-edge AI-driven tech company specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
+  keywords: ['technology', 'software', 'development', 'solutions'],
+  metadataBase: new URL('https://www.fiqrtech.com'),
+} */
 const LazyImage = ({ src, alt, className }) => {
   const imgRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);

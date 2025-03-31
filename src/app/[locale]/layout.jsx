@@ -7,6 +7,8 @@ import Providers from './providers'
 import '../../../styles/globals.css';
 
 
+
+
 export const metadata =  {
   title: {
     default: 'FiqrTech - Your Trusted Tech Partner',
@@ -40,11 +42,25 @@ export const metadata =  {
       'max-snippet': -1,
     },
   },
+  other: {
+    'fb:app_id' : '1168044524914647'
+  },
 }
 
 
 export default async function RootLayout({children, params}) {
-
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FiqrTech",
+    "url": "https://fiqrtech.com",
+    "logo": "https://fiqrtech.com/logo.png",
+    "description": "Iraq's first AI-powered 3D web development company",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IQ"
+    }
+  };
   const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -52,6 +68,11 @@ export default async function RootLayout({children, params}) {
 
   return (
     <html lang={locale}>
+      <head>
+      <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      </head>
       <body>
         <Providers>
         <NextIntlClientProvider>

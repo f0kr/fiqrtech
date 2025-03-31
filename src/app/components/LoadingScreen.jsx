@@ -53,9 +53,9 @@ export default function Dice() {
         diceRef.current.rotation,
         { x: 1, y: -5},
         {
-          x: -(Math.PI * 6)  ,
-          y: Math.PI * 6 ,
-          duration: 6,
+          x: -(Math.PI * 4)  ,
+          y: Math.PI * 4 ,
+          duration: 3,
           ease: "power3.out",
         }, 0
       )
