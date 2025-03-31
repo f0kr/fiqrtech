@@ -27,21 +27,7 @@ export const metadata =  {
     description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
     url: 'https://www.fiqrtech.com',
     siteName: 'FiqrTech',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'FiqrTech - Your Trusted Tech Partner',
-    description: 'FiqrTech provides innovative technology solutions for businesses of all sizes.',
-    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -53,9 +39,6 @@ export const metadata =  {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
 }
 
