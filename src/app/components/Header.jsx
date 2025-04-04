@@ -4,10 +4,12 @@ import { LoadingContext } from '../utils/contexts/LoadingContext'
 import Hum from './sub/Hum'
 import LangToggle from './sub/LangToggle'
 import { Link } from '../../i18n/navigation';
-import styles from '../../../styles/header.module.css'
 import { useContext } from 'react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import styles from '../../../styles/header.module.css'
+
+
 export default function Header() {
   const t = useTranslations()
     const {isLoading} = useContext(LoadingContext)

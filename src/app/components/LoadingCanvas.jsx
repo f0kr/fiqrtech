@@ -4,13 +4,26 @@ import { OrbitControls,  } from "@react-three/drei";
 import { Canvas, useThree } from "@react-three/fiber";
 import { Preload } from "@react-three/drei";
 import { useEffect } from "react";
-import Dice from "./LoadingScreen";
-import Plane from "./Plane";
-import Wall from "./Wall";
+import dynamic from "next/dynamic";
 import Discreption from "./sub/Discreption";
-import Orderbtn from './sub/Orderbtn';
+/* import styles from '../../../styles/order.module.css' */
 import OurWorkBtn from './sub/OurWorkBtn.jsx';
+import Wall from './Wall'
+import Dice from './LoadingScreen'
 import * as THREE from "three";
+
+
+const Plane = dynamic(() => import('./Plane'), {
+  ssr: false,
+});
+
+/* const Wall = dynamic(() => import('./Wall'), {
+  ssr: false,
+}); */
+
+/* const Ordercomponent = dynamic(() => import('./sub/Ordercompnonent'),{
+  ssr: false,
+}) */
 
 export default function LoadingCanvas(){
 
@@ -33,11 +46,10 @@ export default function LoadingCanvas(){
 
         
 
-        <Canvas gl={{antialias: true}} /* dpr={window.devicePixelRatio} */
+        <Canvas gl={{antialias: true}} 
         shadows
         >
           <Preload all />
-         {/*  <primitive object={new THREE.AxesHelper(3)} position={[0, 0.5, 0]} /> */}
 
         <CameraSceneControl />
         <OrbitControls enableRotate={false} enableZoom={false} enablePan={false} />
@@ -56,7 +68,7 @@ export default function LoadingCanvas(){
         <Plane />
       </Canvas>
       <OurWorkBtn/>
-      <Orderbtn/>
+      {/* <Ordercomponent className={styles.container2}/> */}
       <Discreption/>
     </div>
     )

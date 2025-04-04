@@ -57,7 +57,7 @@ export default function useCubeRotation(diceRef) {
     window.addEventListener("pointerup", handlePointerUp);
     return () => window.removeEventListener("pointerup", handlePointerUp);
     
-  }, [isLoading, allowRotate, startX, diceRef, faceNumber]);
+  }, [isLoading, allowRotate, startX, diceRef, faceNumber, setDraged, setFaceNumber]);
 
   const handlePointerDown = (e) => {
     setStartX(e.clientX)

@@ -37,6 +37,7 @@ export default function Dice() {
           z: 0,
           duration: 2,
           ease: "power3.out",
+          onStart: ()=> console.log(animationLoad)
         },
         0
       ).to(
@@ -110,6 +111,12 @@ export default function Dice() {
       ease: "sine.inOut",
       onStart:()=> setIsLoading(false)
     })
+/*     tl.to(diceRef.current.rotation, {
+      z: "+=360", // Rotates continuously
+      duration: 200, // Adjust speed
+      repeat: -1, // Infinite loop
+      ease: "linear", // Smooth continuous motion
+    }) */
 
 /*     tl.to(diceRef.current.rotation, {
       z: "-=0.4",
@@ -143,6 +150,9 @@ export default function Dice() {
       radius={0.01}  // Corner radius
       smoothness={3} // Higher = smoother edges
       castShadow
+      scale={[7, 7, 7]}
+      rotation={[Math.PI - 1.3, Math.PI , 1.29]}
+      position={ [0, 0, 0] }
     >
       <meshStandardMaterial side={2} color="#ee771a" />
     </RoundedBox>

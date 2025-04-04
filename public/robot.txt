@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*?*  # Block query parameters
+
+# Sitemaps
+Sitemap: https://www.fiqrtech.com/sitemap.xml
+Sitemap: https://www.fiqrtech.com/en/sitemap.xml
+Sitemap: https://www.fiqrtech.com/ar/sitemap.xml

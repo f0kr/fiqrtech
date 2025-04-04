@@ -1,9 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import styles from "../../../../styles/hum.module.css";
 import { Link } from '../../../i18n/navigation';
+import styles from '../../../../styles/hum.module.css'
+import { useTranslations } from "next-intl";
 export default function Hum() {
+  const t = useTranslations()
   const [toggled, setToggled] = useState(false);
 
   // Open the menu
@@ -53,9 +55,9 @@ export default function Hum() {
         </div>
         
         {/* Menu Links */}
-        <Link href="/ourwork" className={styles.menuItem}>Our Work</Link>
-        <Link href="/order" className={styles.menuItem}>Order</Link>
-        <Link href="/about" className={styles.menuItem}>About Us</Link>
+        <Link href="/ourwork" className={styles.menuItem}>{t('Our Work')}</Link>
+        <Link href="/order" className={styles.menuItem}>{t('Order')}</Link>
+        <Link href="/about" className={styles.menuItem}>{t('About Us')}</Link>
       </div>
     </div>
   );

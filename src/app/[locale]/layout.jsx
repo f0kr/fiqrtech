@@ -1,19 +1,24 @@
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import '../../../styles/globals.css'
+import {NextIntlClientProvider, hasLocale, useTranslations} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '../../i18n/routing';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Providers from './providers'
-import '../../../styles/globals.css';
 
-export function generateMetadata(){
+import { getTranslations } from 'next-intl/server';
+
+
+export async function generateMetadata({ params: {locale}}){
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
   return{
     title: {
       default: 'FiqrTech - Your Trusted Tech Partner',
       template: '%s | FiqrTech'
     },
-    description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
-    keywords: ['technology', 'software', 'development', 'solutions'],
+    description: t('desc'),
+    keywords: t('keywords'),
     metadataBase: new URL('https://www.fiqrtech.com'),
     alternates: {
       canonical: '/',
@@ -24,7 +29,7 @@ export function generateMetadata(){
     },
     openGraph: {
       title: 'FiqrTech - Your Trusted Tech Partner',
-      description: 'FiqrTech is the first AI-driven tech company in Iraq specializing in web development, 3D experiences, UX/UI design, and digital marketing. We build cutting-edge SaaS, AI solutions, and immersive 3D websites for businesses across the Middle East.',
+      description: t('desc'),
       url: 'https://www.fiqrtech.com',
       siteName: 'FiqrTech',
       type: 'website',

@@ -1,7 +1,9 @@
-// Project categories and data for Our Work page
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
+// Project categories and data for Our Work page
 export const categories = [
-    { id: 'programming', label: 'Programming', colorClass: 'category-programming' },
+    { id: 'programming', label: 'Development', colorClass: 'category-programming' },
     { id: 'design', label: 'Design', colorClass: 'category-design' },
     { id: 'advertising', label: 'Advertising', colorClass: 'category-advertising' },
     { id: 'marketing', label: 'Marketing', colorClass: 'category-marketing' }
@@ -14,7 +16,7 @@ export const categories = [
       shortDescription: "A custom e-commerce platform with advanced product filtering, real-time inventory, and seamless checkout experience.",
       fullDescription: "A comprehensive e-commerce solution designed for scalability and performance. This platform features advanced product filtering, real-time inventory management, and a seamless checkout experience optimized for conversion. The platform was built with modern frameworks ensuring fast loading times and a responsive design across all devices.",
       category: "programming",
-      categoryDisplay: "Programming",
+      categoryDisplay: "Development",
       year: "2023",
       technologies: ["React", "Node.js", "MongoDB", "GraphQL", "Stripe API", "AWS S3", "Redis"],
       technologiesDisplay: "React, Node.js, MongoDB",
@@ -46,7 +48,7 @@ export const categories = [
       shortDescription: "A full-stack health tracking application built with React Native, featuring user authentication, activity tracking, and health insights.",
       fullDescription: "A comprehensive health tracking application that allows users to monitor their fitness goals, nutrition intake, and overall health metrics. The app features user authentication, activity tracking, personalized health insights, and integration with popular fitness devices.",
       category: "programming",
-      categoryDisplay: "Programming",
+      categoryDisplay: "Development",
       year: "2023",
       technologies: ["React Native", "Firebase", "Redux", "Node.js", "Express", "MongoDB", "AWS"],
       technologiesDisplay: "React Native, Firebase, Node.js",

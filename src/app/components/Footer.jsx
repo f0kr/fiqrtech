@@ -1,8 +1,8 @@
 "use client"
 import Image from 'next/image';
 import { LoadingContext } from '../utils/contexts/LoadingContext'
+import { useContext } from 'react'
 import styles from '../../../styles/footer.module.css'
-import { useContext } from 'react';
 
 export default function Footer() {
     const {isLoading} = useContext(LoadingContext)

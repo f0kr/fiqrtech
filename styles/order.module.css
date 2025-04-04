@@ -1,9 +1,17 @@
-.container {
+.container1, .container2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #698da3;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff, );
+  }
+
+  .container1{
+    height: 100vh;
+  }
+
+  .container2{
+
   }
   
   .form {
