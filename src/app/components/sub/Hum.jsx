@@ -55,7 +55,6 @@ export default function Hum() {
         
         {/* Menu Links */}
         <Link className="text-white text-2xl font-bold m-[10px 0] transition-all duration-[0.3s] ease-in-out hover:text-[#ffcc99] cursor-pointer" href="/ourwork">{t('Our Work')}</Link>
-        <Link className="text-white text-2xl font-bold m-[10px 0] transition-all duration-[0.3s] ease-in-out hover:text-[#ffcc99] cursor-pointer" href="/order" >{t('Order')}</Link>
         <Link className="text-white text-2xl font-bold m-[10px 0] transition-all duration-[0.3s] ease-in-out hover:text-[#ffcc99] cursor-pointer" href="/about" >{t('About Us')}</Link>
       </div>
     </div>

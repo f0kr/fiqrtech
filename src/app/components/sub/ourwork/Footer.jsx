@@ -39,7 +39,6 @@ export default function Footer () {
           <h3>{t('Ready to start your project?')}</h3>
           <p>{t('call to action')}</p>
           <div className="cta-buttons">
-            <a href="/order" className="cta-button primary">{t('Start a Project')}</a>
             <a href="/contact" className="cta-button secondary">{t('Contact Us')}</a>
           </div>
         </div>
