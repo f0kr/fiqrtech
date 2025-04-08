@@ -48,7 +48,7 @@
     width: 30px;
     height: 4px;
     border-radius: 2px;
-    background: hsl(30, 100%, 80%);
+    background: #ffcc99;
     transform-origin: center;
     transform: translate(-50%, -50%) rotate(45deg);
   }

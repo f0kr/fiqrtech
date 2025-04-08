@@ -1,0 +1,7 @@
+"tailwindCSS.experimental.classRegex": [
+  ["class(?:Name)?=\"([^\"]*)", 1], // for JSX/TSX
+  ["tw`([^`]*)", 1] // for twin.macro or styled-components (optional)
+],
+"tailwindCSS.includeLanguages": {
+  "plaintext": "html" // helpful for uncommon setups
+}

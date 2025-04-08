@@ -1,5 +1,5 @@
 
-import styles from '../../../../styles/order.module.css'
+
 import dynamic from 'next/dynamic'
 
 const Ordercomponent = dynamic(() => import('../../components/sub/Ordercompnonent'), {
@@ -12,6 +12,6 @@ export const metadata = {
 }
 export default function Order(){
   return(
-    <Ordercomponent className={styles.container1}/>
+    <Ordercomponent/>
   )
 }

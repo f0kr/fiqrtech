@@ -1,12 +1,15 @@
-import '../../../styles/globals.css'
+import '../globals.css'
 import {NextIntlClientProvider, hasLocale, useTranslations} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '../../i18n/routing';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Providers from './providers'
-
+/* import Header from '../components/Header';
+import Footer from '../components/Footer'; */
+import Providers from './providers' 
+import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
+
+const Header = dynamic(() => import('../components/Header'));
+const Footer = dynamic(() => import('../components/Footer'));
 
 
 export async function generateMetadata({ params: {locale}}){
@@ -79,7 +82,7 @@ export default async function RootLayout({children, params}) {
           {JSON.stringify(schemaData)}
         </script>
       </head>
-      <body>
+      <body className='m-0  overflow-x-hidden h-lvh w-dvw select-none'>
         <Providers>
         <NextIntlClientProvider>
           <Header/>

@@ -1,41 +1,5 @@
 
-.footerInvisible{
-    display: none;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.8s ease;
   
-  }
-  
-  .footerVisible{
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    justify-content: center;
-    color: #000000;
-    text-align: center;
-    z-index: 100;
-    gap: 1%;
-    padding: 20px;
-    position: absolute;
-    bottom: 30vh;
-    left: 0;
-    list-style-type: none;
-  }
-  
-  .footerVisible img{
-    height: 50%;
-    cursor: url("/pointer.cur"), auto;
-    transition: 0.3s ease-in-out;
-  }
-
-  .footerVisible li a{
-    cursor: url("/pointer.cur"), auto;
-  }
-
-  .footerVisible img:hover{
-    filter: drop-shadow(0 0 1em #c05d1b);
-  }
 
   @media screen and (max-width: 500px) {
     .footerVisible{

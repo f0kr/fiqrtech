@@ -5,25 +5,23 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { Preload } from "@react-three/drei";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
-import Discreption from "./sub/Discreption";
-/* import styles from '../../../styles/order.module.css' */
-import OurWorkBtn from './sub/OurWorkBtn.jsx';
+/* import Discreption from "./sub/Discreption"; */
 import Wall from './Wall'
 import Dice from './LoadingScreen'
 import * as THREE from "three";
 
+const Discreption = dynamic(()=> import('./sub/Discreption'), {
+  ssr: false,
+})
 
 const Plane = dynamic(() => import('./Plane'), {
   ssr: false,
 });
 
-/* const Wall = dynamic(() => import('./Wall'), {
+const Ordercompnonent = dynamic(()=> import('./sub/Ordercompnonent'), {
   ssr: false,
-}); */
+})
 
-/* const Ordercomponent = dynamic(() => import('./sub/Ordercompnonent'),{
-  ssr: false,
-}) */
 
 export default function LoadingCanvas(){
 
@@ -42,7 +40,7 @@ export default function LoadingCanvas(){
   }
 
     return(
-        <div id='canvas-container'>
+        <div className="h-[100vh] w-full bg-[#222222]">
 
         
 
@@ -67,9 +65,8 @@ export default function LoadingCanvas(){
         <Dice/>
         <Plane />
       </Canvas>
-      <OurWorkBtn/>
-      {/* <Ordercomponent className={styles.container2}/> */}
       <Discreption/>
+      <Ordercompnonent/>
     </div>
     )
 }

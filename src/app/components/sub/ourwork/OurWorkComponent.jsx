@@ -5,7 +5,6 @@ import { Link } from '../../../../i18n/navigation';
 import Image from "next/image";
 import Footer from './Footer'
 import ProjectCard from './ProjectCard'
-import "../../../../../styles/ourwork.css";
 import { categories, projects } from "../../../../../projectData";
 import { useTranslations } from "next-intl";
 
