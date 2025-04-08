@@ -55,7 +55,7 @@ export default function Ordercompnonent() {
 <div id="container">
   <button 
   type="button"
-  className='rounded-full bg-amber-900 absolute top-0 right-0 p-3.5'
+  className='hidden rounded-full bg-amber-900 absolute top-0 right-0 p-3.5'
   >Order</button>
     <div
     id="form-container"
